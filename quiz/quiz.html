@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style/style.css">
+
+</head>
+<body>
+  
+
+
+      <div id="home">
+        <a href="./home.html">Home</a>
+        <a class="active" href="javascript:void(0)" id="subject_header"></a>
+        <a href="javascript:void(0)" id="end_test" style="float:right;" onclick="submitTest()" >End Test</a>
+      </div>
+      <div id="clockdiv">
+          <span>Time Left</span>
+          <span class="hours" id="hour"></span> 
+          <span class="minutes" id="minute"></span> 
+          <span class="seconds" id="second"></span>
+      </div> 
+    <div class="container">
+         <div id="frame">
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog" class="modal hide" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog">
+              <div class="modal-content">
+               <div class="modal-header">
+                 <center>
+                 <h2 class="test-summary">Test Summary</h2>
+                 <p class="modal-title">Your response are saved successfully!</p>
+                 </center>
+             </div>
+          <div class="modal-body" id="response">
+          </div>
+           <div class="modal-footer">
+            <a href="./view_result.html"><button id="result">VIEW RESULT</button></a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="modal fade" id="confirmation" role="dialog" class="modal hide" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog">
+          <div class="modal-body" id="response">
+          </div>
+           <div class="modal-footer">
+             <div class="row">
+              <div class="col-sm-6 col-md-6" ><button id="submit" onclick="endTest(1)">Submit Test</button></div>
+              <div class="col-sm-6 col-md-6" ><button id="restart" onclick="restartTest()">Restart Test</button></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="openModel"  data-toggle="modal" data-target="#myModal" hidden>openmodel</button>
+    <button id="openModel2"  data-toggle="modal" data-target="#confirmation" hidden>openmodel</button>
+
+</body>
+<script src="./js/javascript.js"></script>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style/instructions.css">
+
+</head>
+<body>
+    <div id="home">
+        <a class="active" href="./home.html">Home</a>
+        <a href="javascript:void(0)" id="subject_header"></a>
+    </div>
+
+<div class="main" id="main">
+    <div id="frame1" role="content" class="container">
+     <h2> Instructions </h2>
+       <b class="instruction-head">Please read the following instructions very carefully: </b>
+       <div id="instruction">
+          <p>1.	You have 120 <b>minutes</b> to complete the test.</p>
+          <p>2.	The test contains a total of 100 <b>questions</b>.</p>
+          <p>3.	There is only one correct answer to each question. Click on the most appropriate option to mark it as your answer.</p>
+          <p>4. You will be awarded 1 for each correct answer.</p>
+          <p>5.	There is 0.33 <b>penalty</b> for each wrong answer</p>
+          <p>6.	You can change your answer by clicking on some other option.</p>
+          <p>7.	You can unmark your answer by clicking on the "Clear Response" button.</p>
+          <p>8.	A Number list of all questions appears at the right hand side of the screen. You can access the questions in any order within a section or across sections by clicking on the question number given on the number list.</p>
+          <p>9. You can use rough sheets while taking the test. Do not use calculators, log tables, dictionaries, or any other printed/online reference material during the test.</p>
+          <p>10. Do not click the button <b>"Submit test"</b> before completing the test. A test once submitted cannot be resumed.</p>
+       </div>
+    </div>
+ </div>
+
+    <div  class="container">
+
+        <div class="row">
+           <div class="col-12 col-md-8">
+                <p>Choose Your Default language:
+                <select id="lang" class="language">
+                  <option value="eng">ENGLISH</option>
+              </select> 
+              </p>
+           </div>
+       </div>
+
+      <div class="row">
+         <div class="col-12 col-md-8">
+          <p><input type="checkbox" name="aggrement" id="aggrement" onchange="change()">I've read all the instructions  carefully and  abide by them.</p>
+        </div>
+      </div>
+
+     <div class="row">
+       <div class="col-sm-12 col-md-6">
+          <button onclick='window.open("./quiz.html", "_blank", "toolbar=yes,scrollbars=yes,width=1536,height=864");' class="start-btn-class" id="start_test" class="btn btn-primary" >Start Test</button>
+      </div>
+    </div>
+
+   </div>
+
+ </body>
+
+</body>
+<script src="./js/home.js"></script>
+
+</html>
